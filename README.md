@@ -1,8 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome books: with ES6
 
-> Description the project.
+> In this project, you will restructure your Awesome books app code. The goal is to make it more organized by using modules. You will also practice the ES6 syntax that you have learned.
+
+
 
 
 ## Built With
