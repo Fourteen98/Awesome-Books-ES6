@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Awesome Books</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<main class="main">
+    <nav id="navbar">
+        <h1 id="logo">Awesome Books</h1>
+        <ul class="navigation">
+            <li id="books-page-btn">List</li>
+            <hr>
+            <li id="add-page-btn">Add New</li>
+            <hr>
+            <li id="contact-page-btn">Contact</li>
+        </ul>
+    </nav>
+    <section class="home-page">
+        <div class="book-list none" id="books-page"></div>
+        <div class="add-b" id="add-page">
+
+            <form action="#" id="form">
+                <h2>Add a new book</h2>
+                <div class="input-field">
+                    <input type="text" placeholder="Title" id="title"/><br/><br/>
+
+                    <input type="text" placeholder="Author" id="author"/><br/><br/>
+                </div>
+                <div class="btn">
+                    <button type="submit" id="add">Add</button>
+                </div>
+            </form>
+        </div>
+        <div id="contact-page" class="none">
+            <h2>Contact Information</h2>
+            <p>Do you have any questios or you just want to say "Hello"? <br>
+                You can reach out to us!<br>
+            <ul class="contact-info">
+                <li>Our e-mail: mail@example.com</li>
+                <li>Our phone number: +233-000-000-xxx</li>
+                <li>Our address: street name 22, 743883, Lusaka, Zambia</li>
+            </ul>
+            </p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Copyright Justine Imasiku & Muhyideen Elias</p>
+</footer>
+<script type="module" src="js/index.js"></script>
+</body>
+</html>
