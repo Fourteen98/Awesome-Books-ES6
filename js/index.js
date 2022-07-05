@@ -35,7 +35,6 @@ form.addEventListener('submit', (e) => {
   // create a new book in DOM
   ui.addToUI(setBook(bookTitle.value, bookAuthor.value, id));
 
-
   bookTitle.value = '';
   bookAuthor.value = '';
 
@@ -50,10 +49,8 @@ window.addEventListener('load', () => {
   // set the id var to current index value before refresh
   id = 1 + getIndexInLocalStorage();
 
-
   // set form field with temp storage data
   getTempChange();
-
 });
 
 // Navigation
