@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 2% 0 2%;
+}
+
+.main {
+  width: 100%;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 2%;
+}
+
+.hr-bar {
+  border-left: 1px solid black;
+  height: 20px;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.time-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.book-list {
+  width: 90%;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 40px;
+}
+
+.single-book {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.single-book:nth-child(odd) {
+  background-color: #dfdbdb;
+}
+
+.info {
+  display: flex;
+  gap: 8px;
+}
+
+.remove-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  width: fit-content;
+  height: auto;
+  padding: 15px;
+}
+
+.bar {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.book-id {
+  display: none;
+}
+
+.add-b {
+  width: 280px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+}
+
+.input-field input {
+  width: 280px;
+  height: 35px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.none {
+  display: none;
+}
+
+#contact-page {
+  line-height: 30px;
+}
+
+#contact-page h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contact-info {
+  line-height: 25px;
+  padding-left: 50px;
+}
+
+footer {
+  border: 1px solid black;
+  width: 96%;
+  padding: 2%;
+  position: fixed;
+  bottom: 0;
+  margin: 0 2% 15px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
