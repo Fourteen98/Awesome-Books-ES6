@@ -1,6 +1,3 @@
-const bookTitle = document.getElementById('title');
-const bookAuthor = document.getElementById('author');
-
 class LocalStorage {
   // eslint-disable-next-line class-methods-use-this
   getLocalStorage() {
@@ -16,8 +13,6 @@ class LocalStorage {
   setStorage(book) {
     const books = this.getLocalStorage();
     books.push(book);
-    bookTitle.value = '';
-    bookAuthor.value = '';
     localStorage.setItem('books', JSON.stringify(books));
   }
 
@@ -28,13 +23,9 @@ class LocalStorage {
         books.splice(index, 1);
       }
     });
-    localStorage.setItem('books', JSON.stringify(books));
-  }
 
-  setAfterWindowsLoad() {
-    const book = this.getLocalStorage();
-    bookTitle.value = book[book.length - 1].title;
-    bookAuthor.value = book[book.length - 1].author;
+    localStorage.setItem('books', JSON.stringify(books));
+    console.log(books);
   }
 }
 

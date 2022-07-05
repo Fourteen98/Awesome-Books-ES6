@@ -34,12 +34,10 @@ form.addEventListener('submit', (e) => {
 
   // create a new book in DOM
   ui.addToUI(setBook(bookTitle.value, bookAuthor.value, id));
-<<<<<<< HEAD
-=======
+
 
   bookTitle.value = '';
   bookAuthor.value = '';
->>>>>>> 7da4d2b (fix broken book list)
 
   id += 1;
 });
@@ -52,12 +50,10 @@ window.addEventListener('load', () => {
   // set the id var to current index value before refresh
   id = 1 + getIndexInLocalStorage();
 
-<<<<<<< HEAD
-  localS.setAfterWindowsLoad();
-=======
+
   // set form field with temp storage data
   getTempChange();
->>>>>>> 7da4d2b (fix broken book list)
+
 });
 
 // Navigation
