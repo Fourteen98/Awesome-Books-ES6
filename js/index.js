@@ -3,9 +3,14 @@ import LocalStorage from './modules/local_storage.js';
 import CreateUI from './modules/create_ui.js';
 import CustomTime from './modules/time.js';
 
+import { getTempChange, handleChange } from './modules/temp_handle_change.js';
+
 const bookTitle = document.getElementById('title');
 const bookAuthor = document.getElementById('author');
 const form = document.getElementById('form');
+
+bookTitle.onkeyup = handleChange;
+bookAuthor.onkeyup = handleChange;
 
 const localS = new LocalStorage();
 const ui = new CreateUI();
@@ -29,6 +34,12 @@ form.addEventListener('submit', (e) => {
 
   // create a new book in DOM
   ui.addToUI(setBook(bookTitle.value, bookAuthor.value, id));
+<<<<<<< HEAD
+=======
+
+  bookTitle.value = '';
+  bookAuthor.value = '';
+>>>>>>> 7da4d2b (fix broken book list)
 
   id += 1;
 });
@@ -41,7 +52,12 @@ window.addEventListener('load', () => {
   // set the id var to current index value before refresh
   id = 1 + getIndexInLocalStorage();
 
+<<<<<<< HEAD
   localS.setAfterWindowsLoad();
+=======
+  // set form field with temp storage data
+  getTempChange();
+>>>>>>> 7da4d2b (fix broken book list)
 });
 
 // Navigation
