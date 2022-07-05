@@ -10,27 +10,25 @@ const form = document.getElementById('form');
 const localS = new LocalStorage();
 const ui = new CreateUI();
 
-function getVal(title, author, id) {
-  return new AwesomeBooks(title, author, id);
-}
+const setBook = (title, author, id) => new AwesomeBooks(title, author, id);
 
 // important to hold length of local  storage
 let id = 0;
 
-function getIndexInLocalStorage() {
+const getIndexInLocalStorage = () => {
   const books = localS.getLocalStorage();
   // eslint-disable-next-line no-undef
   return books.length;
-}
+};
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // Add new book to local storage
-  localS.setStorage(getVal(bookTitle.value, bookAuthor.value, id));
+  localS.setStorage(setBook(bookTitle.value, bookAuthor.value, id));
 
   // create a new book in DOM
-  ui.addToUI(getVal(bookTitle.value, bookAuthor.value, id));
+  ui.addToUI(setBook(bookTitle.value, bookAuthor.value, id));
 
   id += 1;
 });
@@ -42,6 +40,8 @@ window.addEventListener('load', () => {
 
   // set the id var to current index value before refresh
   id = 1 + getIndexInLocalStorage();
+
+  localS.setAfterWindowsLoad();
 });
 
 // Navigation
